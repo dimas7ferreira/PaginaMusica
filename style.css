@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+::placeholder {
+    color: #f5f5f555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Cantata One', serif;
+    background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+    overflow: hidden;
+    display: flex;
+
+}
+
+li {
+    list-style: none;
+}
+
+.feather {
+    width: 15px;
+    height: 15px;
+    padding-right: 2px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* box esquerdo */
+aside {
+    height: 100%;
+    padding: 35px 20px;
+    background: (#040517);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: inset 4px 4px 12px rgb(32, 15, 86, 0.2);
+}
+
+/* perfil */
+aside .perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* perfi e imagem */
+aside .perfil .img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: url(imagem/eu.jpg) no-repeat 55% 50%;
+    background-size: 100%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* perfil dados*/
+aside .perfil .dados p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #e5e5e5f6;
+}
+
+/* perfil dados e editar perfil */
+aside .perfil .dados span {
+    font-size: 11px;
+    cursor: pointer;
+    color: #f5f5f555;
+    transition: color 0.18s linear;
+}
+
+/* dar destaque no editar perfil ao passar o mouse por cima*/
+aside .perfil .dados span:hover {
+    color: #e5e5e5f6;
+}
+
+
+/* parte dos menus abaixo do perfil */
+
+
+/* modificao geral */
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* lista */
+nav ul {
+    width: 100%;
+    border-top: 1px solid #ececec11;
+}
+
+/* margem entre as listas */
+
+nav ul:not(:first-child) {
+    margin-top: 15px;
+}
+
+/* mudar visual da lista*/
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #f5f5f555;
+    cursor: pointer;
+    transition: color 0.18s linear;
+}
+
+/* destaque nos itens */
+nav ul li:hover {
+    color: #e5e5e5f6;
+}
+
+nav ul li.ativo {
+    color: #e5e5e5f6;
+}
+
+
+
+
+/* parte do container */
+
+.container {
+    padding: 20px 20px 20px 60px;
+    width: 100%;
+}
+
+
+/* pesquisa */
+
+.container .pesquisa {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container .pesquisa label {
+    color: #f5f5f555;
+    transition: color 0.18s linear;
+}
+
+.container .pesquisa input {
+    background: none;
+    border: none;
+    width: 1000px;
+    padding: 5px 15px 8px;
+    color: #e5e5e5f6;
+    font-size: 13px;
+}
+
+.container .pesquisa input:focus+label {
+    color: #e5e5e5f6;
+}
+
+
+
+/* playlists em destaque */
+
+
+.destaque {
+    margin-top: 15px;
+}
+
+.destaque>h2 {
+    color: #e5e5e5f6;
+    font-size: 18px;
+}
+
+.destaque .playlists {
+    padding: 15px 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.destaque .playlists::-webkit-scrollbar {
+    background: #a29db411;
+    height: 10px;
+    border-radius: 6px;
+}
+
+.destaque .playlists::-webkit-scrollbar-thumb {
+    background: rgb(32, 15, 86);
+}
+
+.destaque .playlists .play .img {
+    width: 400px;
+    height: 300px;
+    padding-left: 10px;
+    background-size: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.destaque .playlists .play .img img {
+    width: 100%;
+    opacity: 0.75;
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    opacity: 0.75;
+}
+
+.destaque .playlists .play .img img:hover {
+    opacity: 1;
+    transform: scale(1.1) translateX(-10px);
+}
+
+.destaque .playlists .play .info {
+    margin-top: 15px;
+}
+
+.destaque .playlists .play .info h2 {
+    font-size: 16px;
+    color: #e5e5e5f6;
+}
+
+.destaque .playlists .play .info span {
+    font-size: 10px;
+    color: #f5f5f555;
+}
+
+
+
+
+
+/* sugestão */
+
+.sugestao {
+    width: 100%;
+    margin-top: 90px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    align-items: center;
+}
+
+.sugestao>h2 {
+    color: #e5e5e5f6;
+    font-size: 18px;
+}
+
+.sugestao .musicas {
+    padding: 15px 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.sugestao .musicas .img {
+    width: 300px;
+    height: 220px;
+    padding-left: 10px;
+    background-size: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sugestao .musicas::-webkit-scrollbar {
+    background: #a29db411;
+    height: 10px;
+    border-radius: 6px;
+}
+
+.sugestao .musicas::-webkit-scrollbar-thumb {
+    background: rgb(32, 15, 86);
+}
+
+.sugestao .musicas .img img {
+    width: 100%;
+    opacity: 0.75;
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    opacity: 0.75;
+}
+
+.sugestao .musicas .img img:hover {
+    opacity: 1;
+    transform: scale(1.1) translateX(-10px);
+}
+
+.sugestao .musicas p {
+    font-size: 16px;
+    padding-left: 15px;
+    color: #e5e5e5f6;
+}
+
+.sugestao .musicas span {
+    font-size: 10px;
+    color: #f5f5f555;
+    padding-left: 20px;
+
+}
